@@ -6,6 +6,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     background-color: rgb(255, 255, 255);
 flex-direction: center;
@@ -16,8 +20,6 @@ header {
     background-color: rgb(0, 60, 155);
     width: 104dvw;
     height: 120px;
-    
-   
 }
 
 .fotoperfil {
@@ -34,7 +36,13 @@ header {
     border-radius: 50%;
 }
 
-@media screen (min-width:600px) {
+@media screen (min-width:600px) 
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+{
     .fotoperfil img {
         width: 5%;
     }
@@ -97,7 +105,7 @@ header h1 p {
         }
 
         body {
-            width: 100dvw;
+            width: 100vw;
         }
 
     .carousel-images img {
