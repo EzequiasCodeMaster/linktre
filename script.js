@@ -9,3 +9,11 @@ function showNextImage() {
 }
 
 setInterval(showNextImage, 3000); // Mudar a imagem a cada 3 segundos
+
+function showNextImage() {
+    currentIndex = (currentIndex + 1) % totalImages;
+    const newTransformValue = `translateX(-${currentIndex * 100}%)`;
+    console.log(`Current Index: ${currentIndex}, Transform Value: ${newTransformValue}`);
+    document.querySelector('.carousel-images').style.transform = newTransformValue;
+}
+

@@ -1,32 +1,27 @@
-@charset "UTF-8";
+@charset "UTF-8" ;
 
-/* Reset e Fontes */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0px;
+    border: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header {
-    background-color: rgb(0, 60, 155);
-    width: 100%;
-    height: 120px;
-}
-
-/* Esconde a barra de rolagem */
 ::-webkit-scrollbar {
     display: none;
 }
 
-/* Estilo do perfil */
+body {
+    background-color: rgb(255, 255, 255);
+flex-direction: center;
+align-items: center;
+}
+
+header {
+    background-color: rgb(0, 60, 155);
+    width: 104vw;
+    height: 120px;
+}
+
 .fotoperfil {
     display: flex;
     align-items: center;
@@ -35,31 +30,50 @@ header {
 
 .fotoperfil img {
     width: 100px;
+    position: relative;
     margin-right: 20px;
     border: 1px solid aqua;
     border-radius: 50%;
 }
 
+@media screen (min-width:600px) 
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+{
+    .fotoperfil img {
+        width: 5%;
+    }
+}
+
 header h1 {
+    margin: 0px;
+    padding: 0px;
     color: white;
-    text-align: center;
+    text-align: center ;
 }
 
-header h1 p {
-    font-size: 0.5em;
-    color: rgb(243, 178, 0);
+header h1 p { 
+    font-size:0.5em ;
     text-align: center;
+     color: rgb(243, 178, 0);
+     padding: 0px;
+     margin: 0px;
+    
 }
 
-/* Estilo do Carrossel */
 .carousel {
     width: 100%;
-    max-width: 90%;
+    max-width: 90%; /* Defina um valor máximo de largura para o carrossel */
     height: 150px;
-    margin: 10px auto;
+    margin: ;
+    margin-top: 10px;
+    margin-left: 20px;
     overflow: hidden;
     position: relative;
-}
+} 
 
 .carousel-images {
     display: flex;
@@ -69,44 +83,50 @@ header h1 p {
 .carousel-images img {
     width: 100%;
     flex-shrink: 0;
-}
 
-/* Media Queries Responsivos */
+}
 @media (min-width: 200px) {
-    .carousel-images {
-        height: 130px;
-    }
+   .carousel-images {
+    height: 130px;
+   }
 
-    nav {
-        padding-top: 30%;
-    }
+   nav {
+    padding-top: 30%;
+   }
+
 }
+
 
 @media (min-width: 768px) {
     .carousel-images img {
-        width: 100%; /* Ajuste conforme necessário para telas maiores */
+        width: 100%; /* Ajuste para imagens de 50% da largura do contêiner em telas maiores */
     }
 }
 
 @media (min-width: 1024px) {
     .carousel-images img {
-        width: 100%;
+        width: 100%; /* Ajuste para imagens de 25% da largura do contêiner em telas ainda maiores */
     }
 }
 
 @media (min-width: 1366px) {
-    body {
-        width: 100vw;
-    }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        body {
+            width: 100vw;
+        }
 
     .carousel-images img {
-        width: 90%;
+        width: 90%; /* Ajuste para imagens de 25% da largura do contêiner em telas ainda maiores */
         height: 200px;
     }
 
     .carousel {
         width: 600px;
-        margin: 10px auto;
+        margin: auto;
+        margin-top: 7px;
     }
 
     .contratojunto {
@@ -115,10 +135,11 @@ header h1 p {
     }
 
     nav {
-        background-color: rgba(255, 255, 255, 0.822);
-        width: 10vw;
-        margin-left: 10%;
-        padding-top: 200px;
+    
+    background-color: rgba(255, 255, 255, 0.822);
+    width: 10vw;
+    margin-left: 10%;
+    padding-top: 200px;
     }
 
     .rodape {
@@ -126,16 +147,16 @@ header h1 p {
     }
 }
 
-/* Estilo do Anúncio e Contratos */
 .anuncio {
-    height: 200px;
-    border: 4px solid rgb(0, 0, 0);
+   min-width: none;
+   height: 200px;
+    border: 4px  solid rgb(0, 0, 0);
 }
 
 .contratojunto {
     display: flex;
     justify-content: space-around;
-    padding: 30px 20px;
+    padding: 30px 20px 20px 20px;
 }
 
 .contratos {
@@ -144,23 +165,51 @@ header h1 p {
     border: 1px solid black;
 }
 
+.contratos a {
+    .image-link {
+        display: block; /* Garante que o link se comporte como um bloco, ocupando o espaço disponível */
+        width: 100%; /* Ajusta a largura do link à largura da div ou contêiner pai */
+        height: auto; /* Mantém a altura proporcional */
+        overflow: hidden; /* Evita que o conteúdo ultrapasse os limites */
+      }
+}
+
 .contratos img {
-    width: 100%;
-    height: 100px;
-    object-fit: cover;
+    width: 100%; /* Faz com que a imagem ocupe 100% da largura do link */
+  height: 100px; /* Mantém a altura proporcional da imagem */
+  object-fit: cover; /* Faz com que a imagem cubra o link sem distorção */
+
+  display: flex;
+    transition: transform 0.5s ease-in-out; /* Velocidade de transição */
+    will-change: transform; /* Otimização de desempenho */
+}
+
+@media (min-width="768") {
+  
+    .contratos {
+        width: 40%;
+        height: 1000px;
+        border: 1px solid black;
+    }
+    
 }
 
 nav {
     display: flex;
     background-color: rgba(255, 255, 255, 0.822);
-    width: 100vw;
+    width: 100dvw;
     left: 50px;
     gap: 20px;
     margin-top: 40px;
     margin-left: 6%;
+
 }
 
 .rodape {
-    width: 100vw;
+    width: 100dvw;
     margin: auto;
 }
+
+
+
+
