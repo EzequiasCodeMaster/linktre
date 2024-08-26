@@ -26,10 +26,11 @@ width: 100px;
 
 header h1 {
     text-align: center;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 header p {
+    font-size: 0.8em;
     color: rgb(253, 223, 223);
     margin-bottom: 50px;
 }
