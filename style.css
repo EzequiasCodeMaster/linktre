@@ -71,7 +71,6 @@ header h1 p {
     margin: ;
     margin-top: 10px;
     margin-left: 20px;
-    border: 2px solid black;
     overflow: hidden;
     position: relative;
 } 
@@ -86,6 +85,17 @@ header h1 p {
     flex-shrink: 0;
 
 }
+@media (min-width: 200px) {
+   .carousel-images {
+    height: 130px;
+   }
+
+   nav {
+    padding-top: 40%;
+   }
+
+}
+
 
 @media (min-width: 768px) {
     .carousel-images img {
@@ -125,9 +135,11 @@ header h1 p {
     }
 
     nav {
+    
     background-color: rgba(255, 255, 255, 0.822);
     width: 10vw;
     margin-left: 10%;
+    padding-top: 200px;
     }
 
     .rodape {
