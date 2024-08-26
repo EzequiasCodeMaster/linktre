@@ -88,6 +88,9 @@ header h1 p {
 @media (min-width: 200px) {
    .carousel-images {
     height: 130px;
+    display: flex;
+    transition: transform 1s ease-in-out; /* Velocidade de transição */
+    will-change: transform; /* Otimização de desempenho */
    }
 
    nav {
