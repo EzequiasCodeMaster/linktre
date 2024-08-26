@@ -1,218 +1,100 @@
-@charset "UTF-8" ;
+@charset 'UTF-8';
 
 * {
+    padding: 0px;
     margin: 0px;
-    border: 0px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-::-webkit-scrollbar {
-    display: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    
 }
 
 body {
-    background-color: rgb(255, 255, 255);
-flex-direction: center;
-align-items: center;
+    background-color: #012340;
 }
 
-header {
-    background-color: rgb(0, 60, 155);
-    width: 104vw;
-    height: 120px;
-}
-
-.fotoperfil {
+.foto {
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.fotoperfil img {
-    width: 100px;
-    position: relative;
-    margin-right: 20px;
-    border: 1px solid aqua;
+.foto img {
+width: 100px;
     border-radius: 50%;
-}
-
-@media screen (min-width:600px) 
-
-::-webkit-scrollbar {
-    display: none;
-}
-
-{
-    .fotoperfil img {
-        width: 5%;
-    }
+    border: 1 px solid ;
+    margin: auto;
+    margin-bottom: 10px;
 }
 
 header h1 {
-    margin: 0px;
-    padding: 0px;
-    color: white;
-    text-align: center ;
-}
-
-header h1 p { 
-    font-size:0.5em ;
     text-align: center;
-     color: rgb(243, 178, 0);
-     padding: 0px;
-     margin: 0px;
-    
+    font-size: 3em;
 }
 
-.carousel {
-    width: 100%;
-    max-width: 90%; /* Defina um valor máximo de largura para o carrossel */
-    height: 150px;
-    margin: ;
-    margin-top: 10px;
+header p {
+    color: rgb(253, 223, 223);
+    margin-bottom: 50px;
+}
+
+main {display: flex;
+    flex-direction: column;
+ gap: 40px;
+}
+
+.linkspai{
+    background-color: #0247833b;
+    width: 90%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
     margin-left: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: transform 1s ease-in-out; /* Controla a duração e o timing */
+}
+
+.linkspai:hover {
+    transform: translate(0px, -10px);
+}
+
+main .linkspai h2 {
+    padding-left: 40%;
+}
+
+.links {
+    transition: transform 1s ease-in-out; /* Controla a duração e o timing */
     overflow: hidden;
-    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid;
 } 
 
-.carousel-images {
-    display: flex;
-    transition: transform 1s ease;
+
+.links:hover {
+    
+    transform: translate(0px, -10px);
+    border: 1.5px solid white;
 }
 
-.carousel-images img {
+main img {
+    background-color:#027333 ;
     width: 100%;
-    flex-shrink: 0;
-
-}
-@media (min-width: 200px) {
-   .carousel-images {
-    height: 130px;
-    display: flex;
-    transition: transform 1s ease-in-out; /* Velocidade de transição */
-    will-change: transform; /* Otimização de desempenho */
-   }
-
-   nav {
-    padding-top: 30%;
-   }
-
+    height: 100%;
+    object-fit: fill;
 }
 
-
-@media (min-width: 768px) {
-    .carousel-images img {
-        width: 100%; /* Ajuste para imagens de 50% da largura do contêiner em telas maiores */
-    }
+main a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
 }
 
-@media (min-width: 1024px) {
-    .carousel-images img {
-        width: 100%; /* Ajuste para imagens de 25% da largura do contêiner em telas ainda maiores */
-    }
-}
-
-@media (min-width: 1366px) {
-        ::-webkit-scrollbar {
-            display: none;
-        }
-
-        body {
-            width: 100vw;
-        }
-
-    .carousel-images img {
-        width: 90%; /* Ajuste para imagens de 25% da largura do contêiner em telas ainda maiores */
-        height: 200px;
-    }
-
-    .carousel {
-        width: 600px;
-        margin: auto;
-        margin-top: 7px;
-    }
-
-    .contratojunto {
-        width: 50%;
-        margin: auto;
-    }
-
-    nav {
-    
-    background-color: rgba(255, 255, 255, 0.822);
-    width: 10vw;
-    margin-left: 10%;
-    padding-top: 200px;
-    }
-
-    .rodape {
-        width: 50px;
-    }
-}
-
-.anuncio {
-   min-width: none;
-   height: 200px;
-    border: 4px  solid rgb(0, 0, 0);
-}
-
-.contratojunto {
-    display: flex;
-    justify-content: space-around;
-    padding: 30px 20px 20px 20px;
-}
-
-.contratos {
-    width: 40%;
-    height: 100px;
-    border: 1px solid black;
-}
-
-.contratos a {
-    .image-link {
-        display: block; /* Garante que o link se comporte como um bloco, ocupando o espaço disponível */
-        width: 100%; /* Ajusta a largura do link à largura da div ou contêiner pai */
-        height: auto; /* Mantém a altura proporcional */
-        overflow: hidden; /* Evita que o conteúdo ultrapasse os limites */
-      }
-}
-
-.contratos img {
-    width: 100%; /* Faz com que a imagem ocupe 100% da largura do link */
-  height: 100px; /* Mantém a altura proporcional da imagem */
-  object-fit: cover; /* Faz com que a imagem cubra o link sem distorção */
-
-  display: flex;
-    transition: transform 0.5s ease-in-out; /* Velocidade de transição */
-    will-change: transform; /* Otimização de desempenho */
-}
-
-@media (min-width="768") {
-  
-    .contratos {
-        width: 40%;
-        height: 1000px;
-        border: 1px solid black;
-    }
+main h2 {
+    transition: transform 1s ease-in-out; /* Controla a duração e o timing */
     
 }
 
-nav {
-    display: flex;
-    background-color: rgba(255, 255, 255, 0.822);
-    width: 100dvw;
-    left: 50px;
-    gap: 20px;
-    margin-top: 40px;
-    margin-left: 6%;
-
+main h2:hover {
+    transform: translate(0px, -10px);
 }
-
-.rodape {
-    width: 100dvw;
-    margin: auto;
-}
-
-
-
-
