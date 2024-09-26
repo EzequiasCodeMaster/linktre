@@ -35,9 +35,12 @@ header p {
     margin-bottom: 50px;
 }
 
-main {display: flex;
+main {
+    width: 100dvw;
+    display: flex;
     flex-direction: column;
- gap: 40px;
+    align-items: center;
+     gap: 40px;
 }
 
 .linkspai{
