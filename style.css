@@ -9,7 +9,11 @@
 }
 
 body {
+    background-image: url(imagens/n2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
        background-color: #012340;
+       background-position: center center;
 }
 
 .foto {
@@ -25,13 +29,14 @@ width: 100px;
 }
 
 header h1 {
+    color: #08c427e1;
     text-align: center;
     font-size: 2em;
 }
 
 header p {
     font-size: 0.8em;
-    color: rgb(253, 223, 223);
+    color: rgb(183, 230, 109);
     margin-bottom: 50px;
 }
 
